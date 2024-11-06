@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html lang="en" class="dark">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		%sveltekit.head%
+	</head>
+
+<style>
+	* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Tema oscuro */
+    --bag-top-image: url(/images/bg-desktop-dark.jpg);
+    --main-bg: hsl(235, 21%, 11%);
+    --todo-bg: hsl(235, 24%, 19%);
+    --todo-shadow: hsl(235, 21%, 11%);
+    --font-color: hsl(234, 39%, 85%);
+    --font-color-hover: #FFF;
+    --button-bg: hsl(234, 13%, 28%);
+    /* Sección 2  */
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+body {
+    background: var(--bag-top-image) no-repeat;
+    background-color: var(--main-bg);
+    background-size: contain;
+    color: var(--font-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+</style>
+	<body data-sveltekit-preload-data="hover" class={currentTheme}>
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
+
+
